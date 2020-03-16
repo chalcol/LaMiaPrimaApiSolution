@@ -1,13 +1,10 @@
 ﻿using AutoMapper;
 using CourseLibrary.API.Services;
-using LaMiaPrimaApi.Helpers;
 using LaMiaPrimaApi.Models;
 using LaMiaPrimaApi.ResourceParameters;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Web.Http;
 using HttpGetAttribute = Microsoft.AspNetCore.Mvc.HttpGetAttribute;
 using HttpHeadAttribute = System.Web.Http.HttpHeadAttribute;
