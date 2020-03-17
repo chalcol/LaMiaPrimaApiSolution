@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Web.Http;
 using HttpGetAttribute = Microsoft.AspNetCore.Mvc.HttpGetAttribute;
 using HttpHeadAttribute = System.Web.Http.HttpHeadAttribute;
+using HttpOptionsAttribute = Microsoft.AspNetCore.Mvc.HttpOptionsAttribute;
 using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
@@ -85,6 +86,13 @@ namespace LaMiaPrimaApi.Controllers
 
             var authorToReturn = _mapper.Map<AuthorDto>(authorEntity);
             return CreatedAtRoute("GetAuthor", new {authorId = authorToReturn.Id },authorToReturn);
+        }
+
+        [HttpOptions]
+        public ActionResult GetAuthorsOptions()
+        {
+            Response.Headers.Add("Allow", "GET, OPTIONS, POST");
+            return Ok();
         }
 
        
