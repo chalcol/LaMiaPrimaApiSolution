@@ -9,7 +9,7 @@ namespace LaMiaPrimaApi.Models
     public class CourseForCreationDto : IValidatableObject
     {
         [Required]
-        [MaxLength(100)]
+        [MaxLength(101)]
         public string Title { get; set; }
 
         
